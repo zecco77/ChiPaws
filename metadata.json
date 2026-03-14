@@ -1,0 +1,7 @@
+{
+  "name": "Remix: ChiPaws - Chicago Dog Rescue",
+  "description": "The most energetic dog adoption platform in Chicago. Find your forever buddy with our bold new look.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
