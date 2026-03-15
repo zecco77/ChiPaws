@@ -425,7 +425,7 @@ function AppContent() {
             </button>
             <button 
               onClick={() => setShowDonationModal(displayPuppies[0])}
-              className="pill-button bg-chipaws-yellow text-black text-xl"
+              className="hidden md:block pill-button bg-chipaws-yellow text-black text-xl"
             >
               DONATE
             </button>
@@ -443,12 +443,21 @@ function AppContent() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-chipaws-cream pt-24 px-8 flex flex-col gap-8 items-center"
+            className="fixed inset-0 z-40 bg-chipaws-cream pt-32 px-8 flex flex-col gap-8 items-center"
           >
             <NavLink onClick={() => { setActiveTab('discover'); setIsMenuOpen(false); }}>DISCOVER</NavLink>
             <NavLink onClick={() => { setActiveTab('puppies'); setIsMenuOpen(false); }}>PUPPIES</NavLink>
             <NavLink onClick={() => { setActiveTab('shelters'); setIsMenuOpen(false); }}>SHELTERS</NavLink>
             <NavLink onClick={() => { setActiveTab('post'); setIsMenuOpen(false); }}>POST A PUP</NavLink>
+            <button 
+              onClick={() => {
+                setShowDonationModal(displayPuppies[0]);
+                setIsMenuOpen(false);
+              }}
+              className="pill-button bg-chipaws-yellow text-black text-2xl mt-4"
+            >
+              DONATE
+            </button>
           </motion.div>
         )}
       </AnimatePresence>
